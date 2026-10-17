@@ -257,6 +257,13 @@ plot(v_kec, add = TRUE, border = "yellow")
 writeRaster(s2,  "output/s2_crop_semarang.tif",  overwrite = TRUE)
 writeRaster(scl, "output/scl_crop_semarang.tif", overwrite = TRUE)
 
+# Simpan gambar citra hasil crop (false color B8-B4-B3, vegetasi tampak merah)
+png("output/citra_crop_semarang.png", width = 8, height = 8, units = "in", res = 300)
+plotRGB(s2, r = 4, g = 2, b = 1, stretch = "lin",
+        main = "Citra Sentinel-2 Hasil Crop Kabupaten Semarang (False Color B8-B4-B3)")
+plot(v_kec, add = TRUE, border = "yellow", lwd = 0.8)
+dev.off()
+
 # ==============================================================
 # 4. KLASIFIKASI TUTUPAN LAHAN
 # ==============================================================
