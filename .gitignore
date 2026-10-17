@@ -16,13 +16,15 @@ output/scl_crop_semarang.tif
 output/indeks_semarang.tif
 output/klasifikasi_3857.tif
 output/*.aux.xml
+
+# File peta polos untuk layout QGIS & file duplikat
 output/peta_polos_*
-output/peta_batas_kabupaten.*
-output/batas_kab_semarang_wgs84.*
-
 output/peta_batas_*
-
+output/batas_kab_semarang_wgs84.*
 output/peta_klasifikasi_polos.*
 output/peta_klasifikasi.qml
 output/peta_klasifikasi.tif
 
+# Folder publikasi dashboard (shinyapps.io)
+dashboard/
+rsconnect/
