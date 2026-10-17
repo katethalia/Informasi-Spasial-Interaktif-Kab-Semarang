@@ -5,8 +5,7 @@ indeks spektral dan klasifikasi tutupan lahan Kabupaten Semarang menggunakan cit
 Sentinel-2 dan R. Hasil analisisnya juga saya sajikan dalam bentuk dashboard peta interaktif.
 
 Dikerjakan oleh :
-**1. Katerine Thalia Syahiranadya (5016241126)**
-**2. Icha Ramanda Putri (5016241119)**
+**Katerine Thalia Syahiranadya (5016241126)** & **Icha Ramanda Putri (5016241119)**
 
 ## Tentang Project
 
