@@ -28,8 +28,7 @@ Tahapan yang dikerjakan:
 | Citra Sentinel-2 Level-2A | 14 Oktober 2026, tile T49MDN dan T49MDM | ESA, Copernicus Data Space Ecosystem |
 | Batas administrasi | RBI 1:25.000 Kabupaten Semarang tahun 2022 | Badan Informasi Geospasial, Ina-Geoportal |
 
-Sistem koordinat yang digunakan adalah WGS 84 / UTM zona 49S (EPSG:32749). Data mentah
-tidak saya unggah karena ukurannya sekitar 2 GB.
+Sistem koordinat yang digunakan adalah WGS 84 / UTM zona 49S (EPSG:32749). 
 
 ## Metode Klasifikasi
 
