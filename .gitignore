@@ -1,0 +1,28 @@
+# Data mentah (ukuran besar)
+data/
+
+# Folder di luar tugas
+ICHA/
+ICHA.zip
+
+# File bawaan RStudio
+.Rproj.user/
+.Rhistory
+.RData
+
+# Raster besar hasil olahan
+output/s2_crop_semarang.tif
+output/scl_crop_semarang.tif
+output/indeks_semarang.tif
+output/klasifikasi_3857.tif
+output/*.aux.xml
+output/peta_polos_*
+output/peta_batas_kabupaten.*
+output/batas_kab_semarang_wgs84.*
+
+output/peta_batas_*
+
+output/peta_klasifikasi_polos.*
+output/peta_klasifikasi.qml
+output/peta_klasifikasi.tif
+
