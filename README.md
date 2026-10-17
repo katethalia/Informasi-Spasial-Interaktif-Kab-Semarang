@@ -32,9 +32,6 @@ Tahapan yang dikerjakan:
 
 Sistem koordinat yang digunakan adalah WGS 84 / UTM zona 49S (EPSG:32749).
 
-Data mentah (±2 GB) serta raster hasil crop dan indeks spektral (masing-masing ±180 MB)
-tidak diunggah karena melebihi batas ukuran file GitHub. Hasilnya ditampilkan dalam bentuk gambar.
-
 ## Metode Klasifikasi
 
 Indeks spektral dihitung dengan rumus:
