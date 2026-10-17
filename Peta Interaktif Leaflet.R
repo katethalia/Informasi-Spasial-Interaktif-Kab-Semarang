@@ -101,6 +101,31 @@ if (!file.exists(f_sampel)) {
 }
 sampel <- read.csv(f_sampel)
 
+# --- 1.7 Isi popup kecamatan (nilai indeks + luas kelas tutupan lahan) ---
+lk <- luas_kec[match(kec_ll$WADMKC, luas_kec$Kecamatan), ]   # samakan urutan kecamatan
+
+baris_idx <- function(ix) {
+  sprintf("<tr><td><b>%s</b></td><td>%.3f</td><td>%.3f</td><td>%.3f</td></tr>",
+          ix, kec_ll[[paste0(ix, "_mean")]],
+          kec_ll[[paste0(ix, "_min")]], kec_ll[[paste0(ix, "_max")]])
+}
+baris_kls <- function(k) {
+  sprintf("<tr><td>%s</td><td>%.2f</td><td>%.1f</td></tr>",
+          k, lk[[k]], 100 * lk[[k]] / lk$Total)
+}
+
+popup_kec <- paste0(
+  "<b style='font-size:14px'>Kecamatan ", kec_ll$WADMKC, "</b><br><br>",
+  "<table cellpadding='4'>",
+  "<tr><th>Indeks</th><th>Mean</th><th>Min</th><th>Max</th></tr>",
+  baris_idx("NDVI"), baris_idx("NDBI"), baris_idx("NDWI"), baris_idx("NDCI"),
+  "</table><br>",
+  "<table cellpadding='4'>",
+  "<tr><th>Kelas</th><th>Luas (km&sup2;)</th><th>%</th></tr>",
+  baris_kls("Vegetasi"), baris_kls("Bangunan"),
+  baris_kls("Perairan"), baris_kls("Awan"),
+  "</table>"
+)
 
 # ==============================================================
 # 2. TAMPILAN DASHBOARD (UI)
@@ -216,7 +241,10 @@ server <- function(input, output, session) {
     }
     
     m %>%
-      addPolygons(data = kec_ll, color = "black", weight = 1, fill = FALSE,
+      addPolygons(data = kec_ll, color = "black", weight = 1,
+                  fillColor = "transparent", fillOpacity = 0,   # bisa diklik, tapi tetap transparan
+                  popup = popup_kec, label = ~WADMKC,
+                  highlightOptions = highlightOptions(weight = 3, color = "yellow"),
                   group = "Batas Kecamatan") %>%
       addPolygons(data = kab_ll, color = "black", weight = 3, fill = FALSE,
                   group = "Batas Kabupaten") %>%
