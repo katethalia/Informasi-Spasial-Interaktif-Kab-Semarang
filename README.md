@@ -4,7 +4,9 @@ Repository ini berisi tugas besar mata kuliah **Pemrograman Spasial A**, yaitu a
 indeks spektral dan klasifikasi tutupan lahan Kabupaten Semarang menggunakan citra
 Sentinel-2 dan R. Hasil analisisnya juga saya sajikan dalam bentuk dashboard peta interaktif.
 
-Oleh :
+**Buka dashboard online:** [Informasi Spasial Interaktif Kabupaten Semarang](https://katethalia.shinyapps.io/Informasi-Spasial-Kab-Semarang/)
+
+Oleh:
 **Katerine Thalia Syahiranadya (5016241126)** & **Icha Ramanda Putri (5016241119)**
 
 ## Tentang Project
@@ -28,7 +30,7 @@ Tahapan yang dikerjakan:
 | Citra Sentinel-2 Level-2A | 14 Oktober 2026, tile T49MDN dan T49MDM | ESA, Copernicus Data Space Ecosystem |
 | Batas administrasi | RBI 1:25.000 Kabupaten Semarang tahun 2022 | Badan Informasi Geospasial, Ina-Geoportal |
 
-Sistem koordinat yang digunakan adalah WGS 84 / UTM zona 49S (EPSG:32749). 
+Sistem koordinat yang digunakan adalah WGS 84 / UTM zona 49S (EPSG:32749).
 
 ## Metode Klasifikasi
 
@@ -68,6 +70,9 @@ Tabel lengkapnya ada di `output/zonal_stats_semarang.csv`.
 
 ## Dashboard Interaktif
 
+Dashboard dapat dibuka secara online, tanpa perlu menginstall R, di:
+**[Informasi Spasial Interaktif Kabupaten Semarang](https://katethalia.shinyapps.io/Informasi-Spasial-Kab-Semarang/)**
+
 Dashboard dibuat menggunakan Shiny Dashboard dan Leaflet, dengan empat menu:
 - **Klasifikasi Tutupan Lahan**: peta 4 kelas beserta batas kabupaten, batas kecamatan, dan nama kecamatan
 - **Zonal Indeks per Kecamatan**: peta nilai rata-rata NDVI, NDBI, NDWI, dan NDCI per kecamatan
@@ -84,6 +89,9 @@ Setiap layer pada peta bisa dinyalakan atau dimatikan.
 
 ## Cara Menjalankan
 
+**Cara paling mudah:** buka dashboard langsung melalui [link online](https://katethalia.shinyapps.io/Informasi-Spasial-Kab-Semarang/).
+
+Untuk menjalankan di komputer sendiri:
 1. Download repository ini (Code → Download ZIP), ekstrak, lalu buka `Peta Tutupan Lahan.Rproj` di RStudio.
 2. Install package yang dibutuhkan:
 ```r
@@ -107,4 +115,4 @@ Setiap layer pada peta bisa dinyalakan atau dimatikan.
 
 ## Tools
 
-R, RStudio, terra, sf, ggplot2, Shiny, Leaflet, dan QGIS (untuk layout peta)
+R, RStudio, terra, sf, ggplot2, Shiny, Leaflet, shinyapps.io (hosting dashboard), dan QGIS (untuk layout peta)
