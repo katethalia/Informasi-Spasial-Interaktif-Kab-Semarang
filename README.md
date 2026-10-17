@@ -52,6 +52,8 @@ Scene Classification Layer (SCL) Sentinel-2, lalu dicek secara visual pada citra
 
 ## Hasil
 
+### Luas Tutupan Lahan
+
 | Kelas | Luas (km²) | Persentase |
 |-------|-----------:|-----------:|
 | Vegetasi | 804,77 | 78,86% |
@@ -59,7 +61,19 @@ Scene Classification Layer (SCL) Sentinel-2, lalu dicek secara visual pada citra
 | Perairan | 8,78 | 0,86% |
 | Awan | 0,72 | 0,07% |
 
-![Peta Klasifikasi Tutupan Lahan](output/peta_komposit_klasifikasi.png)
+### Peta Komposit (R)
+
+![Peta Komposit Klasifikasi dari R](output/peta_komposit_klasifikasi.png)
+
+### Layout Peta (QGIS)
+
+![Layout Peta Klasifikasi dari QGIS](gambar/layout_peta_klasifikasi.png)
+
+Seluruh pengolahan data dan klasifikasi dilakukan di R. QGIS digunakan untuk menyusun
+layout peta agar elemen kartografinya (legenda, skala, panah utara, dan informasi sumber)
+lebih rapi untuk keperluan cetak.
+
+### Zonal Statistics
 
 Dari hasil zonal statistics, kecamatan dengan NDVI rata-rata tertinggi adalah Jambu (0,640),
 sedangkan yang terendah adalah Pringapus (0,320). Pringapus juga memiliki NDBI rata-rata
@@ -86,6 +100,7 @@ Setiap layer pada peta bisa dinyalakan atau dimatikan.
 - `Klasifikasi Tutupan Lahan.R`: script analisis utama
 - `Peta Interaktif Leaflet.R`: script dashboard interaktif
 - `output/`: hasil analisis berupa peta (.png), tabel (.csv), raster klasifikasi (.tif), dan batas wilayah (.shp, .gpkg)
+- `gambar/`: layout peta dari QGIS
 
 ## Cara Menjalankan
 
