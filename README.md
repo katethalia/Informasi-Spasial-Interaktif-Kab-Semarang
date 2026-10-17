@@ -32,6 +32,9 @@ Tahapan yang dikerjakan:
 
 Sistem koordinat yang digunakan adalah WGS 84 / UTM zona 49S (EPSG:32749).
 
+Data mentah (±2 GB) serta raster hasil crop dan indeks spektral (masing-masing ±180 MB)
+tidak diunggah karena melebihi batas ukuran file GitHub. Hasilnya ditampilkan dalam bentuk gambar.
+
 ## Metode Klasifikasi
 
 Indeks spektral dihitung dengan rumus:
@@ -73,6 +76,17 @@ Seluruh pengolahan data dan klasifikasi dilakukan di R. QGIS digunakan untuk men
 layout peta agar elemen kartografinya (legenda, skala, panah utara, dan informasi sumber)
 lebih rapi untuk keperluan cetak.
 
+<details>
+<summary><b>Lihat citra hasil crop dan peta indeks spektral</b></summary>
+
+#### Citra Hasil Crop (False Color B8-B4-B3)
+![Citra Hasil Crop](output/citra_crop_semarang.png)
+
+#### Indeks Spektral
+![Peta Indeks Spektral](output/peta_indeks_semarang.png)
+
+</details>
+
 ### Zonal Statistics
 
 Dari hasil zonal statistics, kecamatan dengan NDVI rata-rata tertinggi adalah Jambu (0,640),
@@ -80,7 +94,10 @@ sedangkan yang terendah adalah Pringapus (0,320). Pringapus juga memiliki NDBI r
 tertinggi (0,087). Nilai NDWI maksimum tertinggi terdapat di Tuntang (0,576) dan Banyubiru (0,536),
 yang berbatasan langsung dengan Rawa Pening.
 
-Tabel lengkapnya ada di `output/zonal_stats_semarang.csv`.
+Tabel lengkap:
+- Semua indeks: [zonal_stats_semarang.csv](output/zonal_stats_semarang.csv)
+- Per indeks: [NDVI](output/tabel_zonal_NDVI.csv) · [NDBI](output/tabel_zonal_NDBI.csv) · [NDWI](output/tabel_zonal_NDWI.csv) · [NDCI](output/tabel_zonal_NDCI.csv)
+- Luas kelas per kecamatan: [luas_kelas_per_kecamatan.csv](output/luas_kelas_per_kecamatan.csv)
 
 ## Dashboard Interaktif
 
@@ -102,11 +119,8 @@ Setiap layer pada peta bisa dinyalakan atau dimatikan.
 - `output/`: hasil analisis berupa peta (.png), tabel (.csv), raster klasifikasi (.tif), dan batas wilayah (.shp, .gpkg)
 - `gambar/`: layout peta dari QGIS
 
-## Cara Menjalankan
+## Cara Menjalankan di Komputer Sendiri
 
-**Cara paling mudah:** buka dashboard langsung melalui [link online](https://katethalia.shinyapps.io/Informasi-Spasial-Kab-Semarang/).
-
-Untuk menjalankan di komputer sendiri:
 1. Download repository ini (Code → Download ZIP), ekstrak, lalu buka `Peta Tutupan Lahan.Rproj` di RStudio.
 2. Install package yang dibutuhkan:
 ```r
