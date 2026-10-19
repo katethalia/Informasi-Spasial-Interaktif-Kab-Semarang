@@ -4,10 +4,10 @@ Repository ini berisi tugas besar mata kuliah **Pemrograman Spasial A**, yaitu a
 indeks spektral dan klasifikasi tutupan lahan Kabupaten Semarang menggunakan citra
 Sentinel-2 dan R. Hasil analisisnya juga saya sajikan dalam bentuk dashboard peta interaktif.
 
-**Buka dashboard online:** [Informasi Spasial Interaktif Kabupaten Semarang](https://katethalia.shinyapps.io/Informasi-Spasial-Kab-Semarang/)
+**Buka dashboard online:** [Informasi Spasial Interaktif Kabupaten Semarang](https://icharamanda.shinyapps.io/dashboard/)
 
 Oleh:
-**Katerine Thalia Syahiranadya (5016241126)** & **Icha Ramanda Putri (5016241119)**
+**Icha Ramanda Putri (5016241119)** & **Katerine Thalia Syahiranadya (5016241126)**
 
 ## Tentang Project
 
@@ -99,7 +99,7 @@ Tabel lengkap:
 ## Dashboard Interaktif
 
 Dashboard dapat dibuka secara online, tanpa perlu menginstall R, di:
-**[Informasi Spasial Interaktif Kabupaten Semarang](https://katethalia.shinyapps.io/Informasi-Spasial-Kab-Semarang/)**
+**[Informasi Spasial Interaktif Kabupaten Semarang](https://icharamanda.shinyapps.io/dashboard/)**
 
 Dashboard dibuat menggunakan Shiny Dashboard dan Leaflet, dengan empat menu:
 - **Klasifikasi Tutupan Lahan**: peta 4 kelas beserta batas kabupaten, batas kecamatan, dan nama kecamatan
@@ -111,23 +111,23 @@ Setiap layer pada peta bisa dinyalakan atau dimatikan.
 
 ## Isi Repository
 
-- `Klasifikasi Tutupan Lahan.R`: script analisis utama
-- `Peta Interaktif Leaflet.R`: script dashboard interaktif
+- `klasifikasi tutupan lahan.R`: script analisis utama
+- `leaflet.R`: script dashboard interaktif
 - `output/`: hasil analisis berupa peta (.png), tabel (.csv), raster klasifikasi (.tif), dan batas wilayah (.shp, .gpkg)
 - `gambar/`: layout peta dari QGIS
 
 ## Cara Menjalankan di Komputer Sendiri
 
-1. Download repository ini (Code → Download ZIP), ekstrak, lalu buka `Peta Tutupan Lahan.Rproj` di RStudio.
+1. Download repository ini (Code → Download ZIP), ekstrak, lalu buka `Peta Icha.Rproj` di RStudio.
 2. Install package yang dibutuhkan:
 ```r
    install.packages(c("terra", "sf", "dplyr", "ggplot2", "ggspatial",
                       "shiny", "shinydashboard", "leaflet", "leaflet.extras"))
 ```
-3. Untuk membuka dashboard, buka `Peta Interaktif Leaflet.R` lalu klik **Run App**.
+3. Untuk membuka dashboard, buka `leaflet.R` lalu klik **Run App**.
    Data yang dibutuhkan sudah tersedia di folder `output/`.
 4. Untuk menjalankan analisis dari awal, unduh data mentah dari sumber di atas,
-   simpan di folder `data/`, lalu jalankan `Klasifikasi Tutupan Lahan.R` secara bertahap.
+   simpan di folder `data/`, lalu jalankan `klasifikasi tutupan lahan.R` secara bertahap.
 
 ## Catatan
 
